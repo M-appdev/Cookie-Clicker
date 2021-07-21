@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Cookie Clicker</string>
+    <string name="counter">Cookies Clicked:</string>
+    <string name="image_of_cookie">Image of cookie</string>
+    <string name="_0">0</string>
+    <string name="set_the_timer_to_5_seconds">Set the timer to 5 seconds</string>
+    <string name="_5_seconds">5 seconds</string>
+    <string name="start">Start</string>
+    <string name="timer321">3</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

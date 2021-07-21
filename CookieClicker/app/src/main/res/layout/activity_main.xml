@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/img_cookie"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/image_of_cookie"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/tv_counterDisplay"
+        app:srcCompat="@drawable/cookie" />
+
+    <TextView
+        android:id="@+id/tv_counterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/counter"
+        android:textColor="#000000"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_counterDisplay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_lastScore" />
+
+    <TextView
+        android:id="@+id/tv_lastScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Score = 0"
+        android:textColor="#3A3939"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_counterDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_0"
+        android:textColor="#000000"
+        android:textSize="66sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/img_cookie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_counterText" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_cookie" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:max="3"
+        android:progress="0"
+        android:progressTint="@color/orange"
+        android:scaleY="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_321countdown"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeMaxTextSize="500dp"
+        android:autoSizeMinTextSize="100dp"
+        android:autoSizeTextType="uniform"
+        android:background="#FFFFFF"
+
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:text="@string/timer321"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_counterDisplay"
+        app:layout_constraintVertical_bias="0.13999999" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="High Score"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
